@@ -26,17 +26,17 @@ print(output_1)
 
 
 
-input = ("1","0","0","1","1")
+output_1 = ("1","0","0","1","1")
 def v_xor(bit0,bit1):
     if(bit0==bit1):
         return "0"
     else:
         return "1"
-def viterbi_encoder(input):
+def viterbi_encoder(output_1):
     #shift register encoder
     s_reg = ["0","0","0"]
     obs = []
-    for t in range (0,len(input)):
+    for t in range (0,len(output_1)):
         #shifting the bits to right
         s_reg[2]=s_reg[1]
         s_reg[1]=s_reg[0]
